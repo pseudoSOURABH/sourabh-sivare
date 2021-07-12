@@ -1,0 +1,322 @@
+#include<iostream>
+using namespace std;
+
+class node
+{
+   int key;
+   int data;
+   node* next;
+    
+   node()
+   {
+      key=0;
+      data=0;
+      next=NULL;
+   }
+    
+   node(int k,int d)
+   {
+      key=k;
+      data=d;
+      next=NULL;
+  
+};
+
+class linkedlist
+{
+   node* head;
+   
+   linkedlist()
+   {
+      head =NULL;
+   }
+   linkedlist(node* n)
+   {
+      head=n;
+   }   
+   
+   node* IfNodeExist(int k)
+   {
+      node* temp=NULL;
+      node* ptr=head;
+      
+      while(ptr!=NULL)
+      {
+         if(ptr->key==k)
+         temp=ptr;
+         
+         ptr=ptr->next;
+      }
+      return temp;
+   }
+
+   //inserting a node at the last location
+   void appendnode(node* n)
+   {
+       if(IfNodeExist(n->key)!=NULL)
+       {
+          cout<<"node already exist,enter another key to append node"<<endl;
+       }
+       
+       else
+       {
+       
+            if(head==NULL)
+            {
+               head=n;
+               cout<<"node appended at head position"<<endl;
+            }
+            {
+               node* ptr=head;
+               while(ptr->next!=NULL)
+               {
+                   ptr=ptr->next;
+               }
+               
+               ptr->next=n;
+           }
+       }
+   } 
+   
+  //appending a node at the very first location 
+   void prependnode(node* n)
+   {
+      node* ptr=(IfNodeExist(n->key));
+      
+      if(ptr!-NULL)
+      cout<<"node already exist ,enter another node to be appended"<<endl;
+      
+      else 
+      {
+         n->next=ptr;
+         head=n;
+         cout<<"node prepended"<<endl;
+      }
+      
+   }
+   
+   
+   //insertng a node at desired location
+   
+   void insertnode(int k,node* n)
+   {
+      if(IfNOdeExist(n->key)!=NULL)
+      {
+         cout<<"node already exist with key value "<<n->key<<endl;
+      }
+      
+      else
+      {
+           if(IfNodeExist(k)==NULL)
+           {  
+               cout<<"no node exist with key value "<<k<<endl;
+           }
+            
+           else
+           {
+               
+                 n->next=ptr->next;
+                 ptr->nexptr;
+                 
+                 cout<<"node inserted with key value:"<<n->key<<endl;
+            }
+            
+       }
+   }
+   
+   
+   //deleting a node with a key 
+   
+   void deletenode(int k)
+   {
+       
+       if(head==NULL)
+       {
+          cout<<"single linked list is empty "<<endl;
+       }
+       
+       
+       else if (head!NULL)
+       {
+           if(head->key==k)
+           {
+              head=head->next;
+              cout<<"node unlinked and head is also changed"<<endl;
+           }   
+           
+           
+           else
+           {
+           
+               node* prevptr=head;
+               node* currptr=head->next;
+               node* temp=NULL;
+               
+               while(currptr!=NULL)
+               {
+                   if(currptr->key==k)
+                   {
+                        currptr=temp;
+                        currptr=NULL;
+                   }
+               
+                   else 
+                   {
+                        currptr=currptr->next;
+                        prevptr=prevptr->next;
+                   }
+               }
+               
+               if(temp!=NULL)
+               {
+                   cout<<" node unlinked with key value <<k<<endl;
+               }
+               
+               else 
+               {
+                   cout<<"node does'nt exist with key value:<<k<<endl;
+                   
+                }
+                
+           }     
+              
+       }
+    
+    }
+           
+           
+    void updatenode(int k ,int d)
+    {
+        node* ptr=IfNodeExist(k);
+        
+        if(ptr!=NULL)
+        {
+            ptr->data=d;
+            cout<<"node data has been updated successfully"<<endl;
+        }
+        
+        else 
+        {
+           cout<<"node does'nt exist with any key value "<<k;
+        }
+   }
+   
+   
+   void printlist()
+   {
+       
+       if(head=NULL)
+       cout<<"no nodes to be printed,linklist is empty"<<endl;
+       
+       else 
+       {
+           cout<<"singly linked list"<<endl;
+           node* temp=head;
+           
+           while(temp!=NULL)
+           {
+               cout<<"("temp->key<<","<<temp->data<<"---->"<<endl;
+               temp=temp->next;
+           }
+       }
+   }
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+            
+       
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      
+      
+      
+       
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
