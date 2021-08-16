@@ -1,20 +1,9 @@
 
 
 
-Queue is a linear data structure which operates in a First IN First OUT or Last IN Last OUT.
-It is named queue as it behaves like a real-world queue, for example – queue(line) of cars in a single lane, queue of people waiting at food counter etc.
-Queue is an abstract data type with a bounded (predefined) capacity.
-It is a simple data structure that allows adding and removing elements in a particular order.
-The order is FIFO(First IN First OUT) or LILO(Last In Last Out).
-queue data structure diagram
+Queue is a linear data structure which operates in a First IN First OUT or Last IN Last o
 
-Standard Queue Operations – 
-Enqueue() – Add item to the queue from the REAR.
-Dequeue() – Remove item from the queue from the FRONT.
-isFull() – Check if queue is full or not.
-isEmpty() – Check if queue empty or not.
-count() – Get number of items in the queue.
-
+#include<iostream>
 using namespace std;
 
 class Queue {
