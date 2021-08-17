@@ -24,7 +24,7 @@ void CountingSort(int input_array[],int s, int r)
 	for(int i=0;i<s;i++)
 		output_array[--count_array[input_array[i]]] = input_array[i];
 	
-	// copy output array elements to input array
+	
 	for(int i=0;i<s;i++)
 		input_array[i]=output_array[i];
 }
