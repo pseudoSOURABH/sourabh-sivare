@@ -1,0 +1,11 @@
+bool search(Node* head, int x) 
+{ 
+    Node* current = head; // Initialize current 
+    while (current != NULL) 
+    { 
+        if (current->key == x) 
+            return true; 
+        current = current->next; 
+    } 
+    return false; 
+} 
