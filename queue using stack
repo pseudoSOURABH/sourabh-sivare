@@ -1,0 +1,70 @@
+//implementing stack using queue data structure
+#include<bits/stdc++.h>
+using namespace std;
+
+class stackk
+{
+	int currsize;
+	queue<int> q1,q2;
+	
+	public:
+		
+		stackk()
+		{
+			currsize=0;
+		}
+		
+		void push(int x)
+		{
+			q2.push(x);
+			
+			while(!q1.empty())
+			{
+			
+			q2.push(q1.front());
+			q1.pop();
+			
+			}
+			
+			currsize++;
+			queue<int>q=q1;
+			q1=q2;
+			q2=q;
+			
+			
+			
+		}
+		
+		void pop()
+		{
+			currsize--;
+			if(q1.empty())
+			return ;
+			
+			q1.pop();
+		}
+		
+		int top()
+		{
+			if(q1.empty())
+			return -1;
+			
+			q1.front();
+		}
+		
+		int size()
+		{
+			return currsize;
+		}
+};
+
+
+int main()
+{
+	stackk s1;
+	s1.push(34);
+	s1.push(21);
+	cout<<s1.top();
+	
+	return 0;
+}
