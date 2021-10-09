@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int decimalToOctal(int a)
+{
+    int x=1,ans=0;
+    while(x<=a)
+    {
+        x*=8;
+    }
+    x/=8;
+    
+    while(x>0)
+    {
+        int lastdigit=a/x;
+        a-=lastdigit*x;
+        x/=8;
+        ans=ans*10 + lastdigit;
+    }
+    return ans;
+}
+int main() {
+    int a;
+    cin>>a;
+    cout<<decimalToOctal(a)<<endl;
+	cout<<"GfG!";
+	return 0;
+}
