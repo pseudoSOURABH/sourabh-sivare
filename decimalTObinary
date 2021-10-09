@@ -1,0 +1,33 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+string decimalTObinary(int a)
+{
+	
+	string remain,s1;
+	while(a>0)
+	{
+	     int r=a%2;
+	     s1 	=to_string(r);
+	     remain+=s1;
+		a/=2;
+		
+		
+	}
+	int n=remain.length();
+	for(int i=0;i<n/2;i++)
+	swap(remain[i],remain[n-i-1]);
+	return remain;
+	
+}
+
+int main()
+{
+	int n;
+	cin>>n;
+	
+	cout<<decimalTObinary(n)<<endl;
+	
+	return 0;
+}	
