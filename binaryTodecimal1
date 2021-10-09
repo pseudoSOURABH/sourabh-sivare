@@ -1,0 +1,28 @@
+//c++ code to convert binary to decimal
+
+#include<iostream>
+using namespace std;
+
+int bTod(int a)
+{
+	int x=1;
+	int sum=0;
+	
+	while(a>0)
+	{
+		int y=a%10;
+		sum+=x*y;
+		x*=2;
+		a/=10;
+	}
+	return sum;
+}
+
+int main()
+{
+	int a;
+	cin >>a;
+	
+	cout<<bTod(a)<<endl;
+	return 0;
+}
