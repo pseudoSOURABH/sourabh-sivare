@@ -1,0 +1,39 @@
+//decimal to hexadecimal
+#include <iostream>
+using namespace std;
+
+string decimalTohexadecimal(int a)
+{
+    string s="";
+    int x=1;
+    
+    while(x<=a)
+    {
+        x*=16;
+    }
+    x/=16;
+    
+    while(x>0)
+    {
+        int lastdigit=a/x;
+        a-=lastdigit*x;
+        x/=16;
+        
+        if(lastdigit<=9)
+           s=s+to_string(lastdigit);
+        
+        else{
+            char c='A' + lastdigit -10;
+            s.push_back(c);
+        }   
+        
+    }
+    return s;
+}
+int main() {
+     int  s;
+     cin>>s;
+     cout<<decimalTohexadecimal(s)<<endl;
+     
+	return 0;
+}
