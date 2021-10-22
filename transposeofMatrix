@@ -1,0 +1,45 @@
+#include <iostream>
+#define R 4
+#define C 4
+using namespace std;
+
+void transpose(int a[][R])
+{
+    int b[R][R];
+    for(int i=0;i<R;i++)
+    {
+        for(int j=0;j<R;j++)
+        {
+            b[i][j]=a[j][i];
+        }
+    }
+    for(int i=0;i<R;i++)
+    {
+        for(int j=0;j<R;j++)
+        {
+            cout<<b[i][j]<<ends;
+        }cout<<endl;
+    }
+}
+int main() {
+	int a[R][R];
+	
+	for(int i=0;i<R;i++)
+	{
+	    for(int j=0;j<R;j++)
+	    {
+	        cin>>a[i][j];
+	    }
+	    
+	}
+	
+	    for(int i=0;i<R;i++)
+	    {
+	        for(int j=0;j<R;j++)
+	    {
+	        cout<<a[i][j]<<ends;
+	    }cout<<endl;
+	    }
+	transpose(a);
+	return 0;
+}
