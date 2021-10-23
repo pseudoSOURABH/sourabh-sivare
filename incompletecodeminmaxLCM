@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int lcm(int n1,int n2)
+{
+      int max_num;
+      max_num = (n1 > n2) ? n1 : n2;  
+      int flag=1;
+    while (flag)    
+    {  
+        
+        if(max_num % n1 == 0 && max_num % n2 == 0)  
+        {  
+            
+            break;  
+        }  
+        ++max_num; // update by 1 on each iteration  
+    }  
+    return max_num;
+}
+int main() {
+	// your code goes here
+	 int a,b;
+	 cin>> a >>b;
+	 int m=lcm(a,b);
+	 
+      int mlcm=INT_MIN;
+      int nlcm=INT_MAX;
+    
+    for(int i=b;i<m;i++)
+    {
+          for(int j=a;j<b;j++)
+          {
+                int z=lcm(i,j);
+                mlcm=max(mlcm,z);
+                nlcm=min(nlcm,z);
+          }
+    }
+    cout<<nlcm<<ends<<mlcm<<endl;
+	return 0;
+}
