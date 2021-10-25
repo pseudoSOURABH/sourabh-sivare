@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+bool iseven (int a)
+{
+    if(a ^ 1==a+1)
+    return true;
+    
+    return false ;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    
+    if(iseven(n))
+    cout<<"EVEN "<<endl;
+    
+    else 
+    cout<<"ODD"<<endl;
+    return 0;
+    
+}
