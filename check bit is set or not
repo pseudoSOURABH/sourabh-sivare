@@ -1,0 +1,20 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int a,i;
+    cin  >> a  >> i;
+    int b=1;
+    b<<i;
+    
+    if(b&a==0)
+    cout<<"bit of "<<i<<"th no is not set"<<endl;
+    
+    else 
+    cout<<"bit is set"<<endl;
+    
+    return 0;
+    
+    
+}
