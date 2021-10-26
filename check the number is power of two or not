@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+    int a ;
+    cin >> a;
+    
+    
+    if((a & (a-1)) == 0)
+    {
+        cout<<"power of two "<<endl;
+        
+        
+    }
+    else 
+    {
+        cout<<"its not a power of two"<<endl;
+    }
+    
+    
+}
