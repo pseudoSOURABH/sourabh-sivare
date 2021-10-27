@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void  get2NonRepeatingNos(int arr[],int n)
+    {
+        map<int,int>m;
+        for(int i=0;i<n;i++)
+        {
+            m[arr[i]]++;
+        }
+        
+        for(auto it:m)
+        {
+            if(it.second==1)
+            cout<<it.first<<endl;
+        }
+    }
+int main()
+{
+    int arr[] = { 2, 3, 7, 9, 11, 2, 3, 11 };
+    int a = sizeof(arr) / sizeof(arr[0]);
+    get2NonRepeatingNos(arr, a);
+    return 0;
+}
