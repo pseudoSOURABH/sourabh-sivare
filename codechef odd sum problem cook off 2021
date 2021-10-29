@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+#define ll long long 
+using namespace std;
+
+int main() {
+	// your code goes here
+	
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	
+	ll t;
+	cin>>t;
+	
+	while(t--)
+	{
+	      ll a;
+	      cin>>a;
+	      
+	      cout<<(a-1)*(a-2)+1<<endl;
+	}
+	
+
+	return 0;
+}
