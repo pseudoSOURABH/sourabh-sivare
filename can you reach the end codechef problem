@@ -1,0 +1,67 @@
+#include <bits/stdc++.h>
+#include<iostream>
+using namespace std;
+
+struct Cell{
+        int row;
+        int col;
+};
+int main() {
+	// your code goes here
+	
+	int t;
+	cin>>t;
+	
+	while(t--)
+      {
+            int n;
+            cin>>n;
+            vector<Cell>v(n);
+            for(int i=0;i<n;i++)
+            {
+                  int r,c;
+                  cin>>r>>c;
+                  
+                  v[i].row=r;
+                  v[i].col=c;
+            }
+            
+           
+                 sort(v.begin(),v.end(),[](Cell a,Cell b)
+                {
+                         return a.row<b.row;
+                 });
+      
+                 int topleft=-1;
+      
+                 for(int i=1;i<n;i++)
+                 {
+                     if(v[i].col==v[i-1].col-1)
+                     topleft=i;
+                     
+                     else 
+                     break;
+                 }
+                 int rightbottom=-1;
+                 for(int i=n-2;i>=0;i--)
+                 {
+                         if(v[i].col==v[i+1].col+1)
+                         rightbottom=i;
+                         
+                         else 
+                         break;
+                         
+                 }
+                 
+                 if(v[topleft].col==1  or v[rightbottom].col==n)
+                 cout<<"NO"<<endl;
+                 
+                 else
+                 cout<<"yes"<<endl;
+      }
+      
+      
+      
+      
+	return 0;
+}
