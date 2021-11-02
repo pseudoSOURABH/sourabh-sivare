@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void reverse(int arr[],int n,int
+    if(i>n/2)
+    return; i)
+{
+    
+    
+    swap(arr[i],arr[n-i-1]);
+    
+    reverse(arr,n,i+1);
+}
+
+int main() {
+	//code
+	
+	int arrr[]={13,11,2,34,3,343,4};
+// 	int a=sizeof(arrr);
+	for(int i=0;i<7;i++)
+	cout<<arrr[i]<<endl;
+	
+	
+	reverse(arrr,7,0);
+	
+	for(int i=0;i<7;i++)
+	cout<<arrr[i]<<endl;
+	return 0;
+}
