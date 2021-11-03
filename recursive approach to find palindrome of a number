@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+bool palindrome(int aray[],int l,int r)
+{
+    if(l>r/2)
+    {
+        return true;
+    }
+    
+    if(aray[l]==aray[r-l-1])
+    return palindrome(aray,l+1,r);
+    
+    return false;
+}
+int main()
+{
+    int arr[]={1,9,3,2,1};
+    int s=sizeof(arr)/sizeof(arr[0]);
+    if(palindrome(arr,0,s))
+    cout<<"no is palindrome"<<endl;
+    
+    else 
+    cout<<"no is not a plindrome"<<endl;
+    
+    return 0;
+}
