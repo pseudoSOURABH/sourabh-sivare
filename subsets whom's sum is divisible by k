@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+void subsets(int n,int arr[],vector<int> & ds,int ind,int sum)
+{
+    if(ind==n && sum%3==0)
+     {
+         for(auto it:ds)
+         {
+             cout<<it<<" ";
+         }
+         cout<<endl;
+             return ;
+     }
+    
+    ds.push_back(arr[ind]);
+    sum+=arr[ind];
+    
+    subsets(n,arr,ds,ind+1,sum);
+    
+    ds.pop_back();
+    sum-=arr[ind];
+    
+    
+    subsets(n,arr,ds,ind+1,sum);
+}
+int main() {
+	int a[3]={1,2,3};
+	vector<int> dss;
+	int m=0;
+	subsets(3,a,dss,0,m);
+	return 0;
+}
