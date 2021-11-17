@@ -1,0 +1,50 @@
+Node* sortedMerge(Node* head1, Node* head2)  
+{  
+    // code here
+    
+   Node *a=head1;
+   Node *b=head2;
+   Node *ptr;
+   Node *dummyNode=new Node(-1);
+   ptr=dummyNode;
+   
+   while(a!=NULL & b!=NULL)
+   {
+       if(a->data<b->data)
+       {
+           ptr->next=a;
+           a=a->next;
+       }
+       else
+       {
+           ptr->next=b;
+           b=b->next;
+       }ptr=ptr->next;
+   }
+   
+   while(a)
+   {
+       ptr->next=a;
+       a=a->next;
+       ptr=ptr->next;
+   }
+   while(b)
+   {
+       ptr->next=b;
+       b=b->next;
+       ptr=ptr->next;
+   }
+   return dummyNode->next;
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+}  
