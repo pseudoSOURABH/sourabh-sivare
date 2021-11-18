@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+vector<int>adj[100003];
+int vis[100003];
+
+void dfs(int node)
+{
+    cout<<node<<endl;
+    vis[node]=1;
+    
+    //now we will traverse in the node
+    
+    for(auto it:adj[node])
+    {
+        if(vis[it]==0)
+        {
+            dfs(it);
+        }
+    }
+    
+}
+
+void dfsSolve()
+{
+    int n,m;
+    cin>> n >> m;
+    for(int i=0;i<m;i++)
+    {
+        int u,v;
+        cin >>u >>v;
+        
+        adj[u].push_back(v);
+        adj[v].push_back(u);
+        
+    }
+    
+    for(int i=1;i<=n;i++)
+    {
+        if(vis[i]==0)
+        {
+            dfs(i);
+        }
+    }
+}
+
+int main() {
+
+	return 0;
+}
