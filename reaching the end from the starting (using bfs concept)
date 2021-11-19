@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int findminimumSteps(int start,int end,int arr[],int n)
+{
+    int vis[end+1];
+    vis[start]=1;
+    
+    queue<pair<int,int>>q;
+    q.push({start,0});
+    
+    while(!q.empty())
+    {
+        
+        int steps=q.front().second;
+        int node=q.front().first;
+        
+        if(end==node)
+        return steps;
+        
+        q.pop();
+        
+        for(int i=0;i<n;i++)
+        {
+            int dest=node*arr[i];
+            
+            if(dest<=end && !vis[dest])
+            {
+                vis[dest]=1;
+                q.push({dest,steps});
+            }
+            
+            
+        }
+    }
+    return -1;
+}
+int main() {
+	cout<<"GfG!";
+	return 0;
+}
