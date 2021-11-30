@@ -17,16 +17,14 @@ int main() {
 	for(int i=0;i<n;i++)
 	{
 	    
-	    if(arr[i]<0)
-	    {
-	        sum=0;
-	        
-	    }
-	    else{
+	  
 	        sum+=arr[i];
 	        ans=max(ans,sum);
+		
+		if(sum<0)
+		sum=0;
 	        
-	    }
+	    
 	}
 	cout<<ans<<endl;
 	
